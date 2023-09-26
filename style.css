@@ -1,0 +1,258 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-size: 20px;
+    text-align: center;
+}
+
+.mainSection{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+.jeu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.devineP{
+    text-align: center;
+    visibility: hidden;
+}
+
+.historyP{
+    text-align: center;
+    visibility: hidden;
+}
+
+.erreur{
+    visibility: hidden;
+}
+
+#erreur{
+    
+    animation: horizontal-shaking 0.5s;
+}
+
+.tryWord{
+    visibility: hidden;
+}
+
+footer{
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+}
+
+svg{
+    width: 100%;
+}
+
+#rect2{
+    width: 0px;
+    animation: anim1 2s ease forwards; 
+    display: none;
+}
+
+#rect3{
+    height: 0px;
+    animation: anim2 2s ease forwards;
+    display: none;
+}
+
+#rect4{
+    width: 0px;
+    animation: anim3 2s ease forwards;
+    display: none;
+}
+
+#rect5{
+    height: 0px;
+    animation: anim4 2s ease forwards;
+    display: none;
+}
+
+#rect6{
+    height: 0px;
+    animation: anim5 2s ease forwards;
+    display: none;
+}
+
+#rect7{
+    stroke-dashoffset: 800px;
+    stroke-dasharray: 800px;
+    animation: anim6 8s ease forwards;
+    display: none;
+}
+
+#rect8{
+    height: 0px;
+    animation: anim7 2s ease forwards;
+    display: none;
+}
+
+#rect9{
+    width: 0px;
+    animation: anim8 2s ease forwards;
+    display: none;
+}
+
+#rect10{
+    width: 0px;
+    animation: anim8 2s ease forwards;
+    display: none;
+}
+
+#rect11{
+    width: 0px;
+    animation: anim8 2s ease forwards;
+    display: none;
+}
+
+
+.containerBgOpacity{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    opacity: 0.9;
+    background: #222;
+    top:0;
+    left: 0;
+    overflow: hidden;
+    animation-name: fadeIn_Container;
+    animation-duration: 1s;
+}
+
+.tryInput{
+    width: 80%;
+    margin: 2%;
+}
+
+.playButton3{
+    margin: 2%;
+}
+
+
+.modalContentPerso{
+    display:none;
+    justify-content: center;
+    width: 50%;   
+    max-width: 200px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #000;
+    animation-name: fadeIn_Modal;
+    animation-duration: 0.8s;
+   
+}
+.close{
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    float: right;
+    color: black;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.headerModalPerso{
+    width: 100%;
+    height: 30px;
+    border-radius: 10px 10px 0px 0px;
+}
+.elementBoby{
+    text-align: center;
+}
+.elementFooter{
+    text-align: center;
+}
+
+@keyframes anim2 {
+    to {
+        height: 190px;
+    }
+}
+@keyframes anim1 {
+    to {
+        width: 60px;
+    }
+}
+@keyframes anim3 {
+    to {
+        width: 180px;
+    }
+}
+@keyframes anim4 {
+    to {
+        height: 40px;
+    }
+}
+@keyframes anim5 {
+    to {
+        height: 20px;
+    }
+}
+@keyframes anim6 {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes anim7 {
+    to {
+        height: 68px;
+    }
+}
+@keyframes anim8 {
+    to {
+        width: 40px;
+    }
+}
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+   }
+  
+@keyframes fadeIn_Modal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+    
+@keyframes fadeIn_Container {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.9;
+    }
+}
