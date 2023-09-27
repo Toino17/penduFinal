@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=*, initial-scale=1.0">
     <title>Jeu du pendu</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Average+Sans&family=Besley&family=Fira+Code:wght@300&display=swap" rel="stylesheet">
+    
 </head>
 <body>
+    <form action="">
+        <button name="play" class="play">Jouer</button>
+    </form> 
     <h1>Jouez donc au pendu</h1>
-    <section class="mainSection">      
+    <section class="mainSection">
+        
         <div class="mainDiv">
             <div class="jeu">
-                <form action="">
-                <button name="play" class="play">Jouer</button>
-                </form>
+                <form class="formReplay">
+                    <button name="replay" class="replay">Rejouer</button>
+                </form> 
                 <p class="devineP">Mot à deviner</p>
                 <p class="historyP">Historique</p>
                 <p class="erreur">Lettre déjà utilisée</p>
@@ -96,6 +104,7 @@
         <div class="containerBgOpacity" id="arrierePlan"></div>
         <div class="modalContentPerso" id="premierPlan">
             <div class="headerModalPerso">
+                <p class="erreurPropal">Proposition invalide.</p>
                 <div class="close">✕</div>
             </div>
 

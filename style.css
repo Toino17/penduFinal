@@ -7,10 +7,14 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #FFF275;
+    font-family: 'Fira Code', monospace;
+    color: #050609;
 }
 
 h1{
     font-size: 20px;
+    font-weight:600;
     text-align: center;
 }
 
@@ -19,6 +23,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .mainDiv{
@@ -35,6 +40,7 @@ h1{
 .devineP{
     text-align: center;
     visibility: hidden;
+    margin-bottom: 10px;
 }
 
 .historyP{
@@ -44,6 +50,8 @@ h1{
 
 .erreur{
     visibility: hidden;
+    margin-block: 8%;
+    color: red;
 }
 
 #erreur{
@@ -53,6 +61,18 @@ h1{
 
 .tryWord{
     visibility: hidden;
+    border: 1px solid black;
+    background: #a9aca9;
+    font-weight: 600;
+    font-size: 13px;
+    color:black;
+    cursor:pointer;
+    padding-inline: 3px;
+    transition: all .1s ease-in-out;
+}
+
+.tryWord:hover {
+   transform: scale(1.1);
 }
 
 footer{
@@ -146,8 +166,44 @@ svg{
     margin: 2%;
 }
 
+.play{
+    border: none;
+    background: none;
+    font-weight: 800;
+    font-size: 26px;
+    cursor:pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.formReplay{
+    margin-bottom: 10vh;
+}
+
+.replay{
+    display: none;
+    border: none;
+    background: none;
+    font-weight: 800;
+    font-size: 26px;
+    cursor:pointer;
+    transition: .2s;
+}
+
+.replay:hover{
+    scale: 1.03;
+}
+
 .playButton3{
     margin: 2%;
+}
+
+.erreurPropal{
+    font-size: 10px;
+    color: red;
+    display: none;
 }
 
 
@@ -169,6 +225,8 @@ svg{
    
 }
 .close{
+    position: absolute;
+    left: 90%;
     cursor: pointer;
     font-size: 14px;
     font-weight: bold;
@@ -179,6 +237,9 @@ svg{
     margin-top: 3px;
 }
 .headerModalPerso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 30px;
     border-radius: 10px 10px 0px 0px;
@@ -188,6 +249,11 @@ svg{
 }
 .elementFooter{
     text-align: center;
+}
+
+.letter{
+    display: inline-block;
+    
 }
 
 @keyframes anim2 {
@@ -256,3 +322,5 @@ svg{
         opacity: 0.9;
     }
 }
+
+
